@@ -1,0 +1,35 @@
+{
+  "name": "genpark-parallel-pr-cloud-sandbox-agent-runner-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Parallel PR cloud sandbox provisioner that runs isolated AI coding agent instances for concurrent pull request work.",
+  "author": "genpark",
+  "category": "engineering",
+  "tags": [
+    "cloud-sandbox",
+    "parallel-pr",
+    "agent-runner",
+    "hoplite",
+    "ci-cd"
+  ],
+  "inputs": {
+    "pr_list": {
+      "type": "array"
+    },
+    "sandbox_region": {
+      "type": "string"
+    }
+  },
+  "outputs": {
+    "sandbox_instances": {
+      "type": "array"
+    },
+    "total_parallel_agents": {
+      "type": "integer"
+    },
+    "estimated_completion_minutes": {
+      "type": "number"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
